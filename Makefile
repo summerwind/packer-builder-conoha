@@ -28,6 +28,14 @@ dist:
 	tar -czf dist/packer-builder-conoha_linux_amd64.tar.gz packer-builder-conoha
 	rm -rf packer-builder-conoha
 	
+	GOARCH=arm64 GOOS=linux go build $(BUILD_FLAGS) .
+	tar -czf dist/packer-builder-conoha_linux_arm64.tar.gz packer-builder-conoha
+	rm -rf packer-builder-conoha
+	
+	GOARCH=arm GOOS=linux go build $(BUILD_FLAGS) .
+	tar -czf dist/packer-builder-conoha_linux_arm.tar.gz packer-builder-conoha
+	rm -rf packer-builder-conoha
+	
 	GOARCH=amd64 GOOS=darwin go build $(BUILD_FLAGS) .
 	tar -czf dist/packer-builder-conoha_darwin_amd64.tar.gz packer-builder-conoha
 	rm -rf packer-builder-conoha
