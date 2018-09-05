@@ -1,5 +1,7 @@
 # ConoHa builder for Packer
 
+***NOTE: Currently, images for Conoha can be built with OpenStack Builder.***
+
 A builder plugin of Packer for building images with ConoHa.  
 This plugin is a forked version of [OpenStack Builder](https://www.packer.io/docs/builders/openstack.html) of Packer.
 
